@@ -14,7 +14,7 @@ else:
     logging.getLogger("requests").setLevel(logging.WARNING)
 
 
-redis = Redis("redis")
+redis = Redis("redis-master")
 
 
 def get_random_bytes():
@@ -66,5 +66,3 @@ if __name__ == "__main__":
             log.exception("In work loop:")
             log.error("Waiting 10s and restarting.")
             time.sleep(10)
-
-
